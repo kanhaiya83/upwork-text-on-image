@@ -1,13 +1,133 @@
-body {
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+.input-container {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 3rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d5edfe;
+}
+.input-container .wrapper {
+  background-color: white;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  padding: 3rem;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.image-container img {
+  width: 100%;
+  display: block;
+  max-width: 1000px;
+}
+.image-wrapper {
+  width: fit-content;
+  position: relative;
+  padding: 0 2%;
+}
+.draggable-text {
+  border: 3px solid black;
+  width: fit-content;
+}
+.draggable-text:hover {
+  cursor: move;
+}
+.drag-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.control-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.control-container select,
+input {
+  font-size: 1.5rem;
+  margin-right: 4rem;
+  padding: 10px;
+}
+label {
+  display: block;
+  font-size: 0.9rem;
+}
+.editor-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.editor-heading {
+  margin: 2rem;
+}
+.submit-btn {
+  width: fit-content;
+  padding: 5px 10px;
+  color: black;
+  background: white;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 3px solid black;
+}
+.submit-btn:hover {
+  color: white;
+  background-color: black;
+}
+.edited-image {
+  width: 100%;
+  padding: 0 20%;
+}
+.btn-group {
+  display: flex;
+  margin: 1rem;
+
+}
+.btn {
+  margin: 0 1rem;
+  width: fit-content;
+  padding: 5px 10px;
+  color: black;
+  background: white;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 3px solid black;
+}
+.btn:hover {
+  color: white;
+  background-color: black;
+}
+@media only screen and (max-width: 800px) {
+  .edited-image{
+    padding: 5%;
+  }
+  .control-container select,
+  input {
+    margin-right: 1rem;
+  }
 }
